@@ -1,0 +1,137 @@
+1. String.length
+Description: Returns the length of a string.
+	Example:
+	let str = "Hello, world!";
+	console.log(str.length);  // Output: 13
+
+
+2. String.charAt(index)
+Description: Returns the character at the specified index.
+	Example:
+	let str = "Hello";
+	console.log(str.charAt(1));  // Output: "e"
+
+
+3. String.charCodeAt(index)
+Description: Returns the Unicode of the character at the specified index.
+	Example:
+	let str = "Hello";
+	console.log(str.charCodeAt(0));  // Output: 72 (Unicode value for 'H')
+
+
+4. String.at(index)
+Description: Returns the character at the specified index, like charAt(), but allows for support of Unicode characters in supplementary planes.
+	Example:
+	let str = "Hello";
+	console.log(str.at(0));  // Output: "H"
+
+5. String[] (Indexing)
+Description: Accesses the character at the specified index, similar to charAt().
+
+	Example:
+	let str = "Hello";
+	console.log(str[0]);  // Output: "H"
+	
+6. String.slice(start, end)
+Description: Extracts a section of a string and returns it as a new string, without modifying the original string.
+	Example:
+	let str = "Hello, world!";
+	console.log(str.slice(0, 5));  // Output: "Hello"
+
+7. String.substring(start, end)
+Description: Returns a substring between two indices. Similar to slice(), but cannot accept negative indices.
+	
+	Example:
+	let str = "Hello, world!";
+	console.log(str.substring(0, 5));  // Output: "Hello"
+
+8. String.substr(start, length)
+Description: Returns a part of a string starting at a specified index, and optionally, a specified length.
+	Example:
+	let str = "Hello, world!";
+	console.log(str.substr(0, 5));  / / Output: "Hello"
+
+
+String Manipulation Methods
+
+9. String.toUpperCase()
+Description: Converts all characters in a string to uppercase.
+	Example:
+	let str = "hello";
+	console.log(str.toUpperCase());  // Output: "HELLO"
+ 
+ 
+10. String.toLowerCase()
+Description: Converts all characters in a string to lowercase.
+	Example:
+	let str = "HELLO";
+	console.log(str.toLowerCase());  // Output: "hello"
+
+
+11. String.concat(...strings)
+Description: Combines two or more strings.
+	Example:
+	let str1 = "Hello";
+	let str2 = " world!";
+	console.log(str1.concat(str2));  // Output: "Hello world!"
+
+
+12. String.trim()
+Description: Removes whitespace from both ends of the string.
+	Example:
+	let str = "  Hello  ";
+	console.log(str.trim());  // Output: "Hello"
+
+
+13. String.trimStart()
+Description: Removes whitespace from the beginning of the string.
+	Example:
+	let str = "  Hello";
+	console.log(str.trimStart());  // Output: "Hello"
+
+
+14. String.trimEnd()
+Description: Removes whitespace from the end of the string.
+	Example:
+	let str = "Hello  ";
+	console.log(str.trimEnd());  // Output: "Hello"
+
+15. String.padStart(targetLength, padString)
+Description: Pads the current string with the padString until it reaches the targetLength.
+	Example:
+	let str = "5";
+	console.log(str.padStart(3, "0"));  // Output: "005"
+
+16. String.padEnd(targetLength, padString)
+Description: Pads the current string with the padString until it reaches the targetLength (padded at the end).
+	Example:
+	let str = "5";
+	console.log(str.padEnd(3, "0"));  // Output: "500"
+
+
+17. String.repeat(count)
+Description: Returns a new string consisting of the current string repeated a specified number of times.
+	Example:
+	let str = "Hi! ";
+	console.log(str.repeat(3));  // Output: "Hi! Hi! Hi! "
+
+
+18. String.replace(search, replacement)
+Description: Replaces the first occurrence of the specified string or regular expression with a new string.
+	Example:
+	let str = "Hello, world!";
+	console.log(str.replace("world", "there"));  // Output: "Hello, there!"
+
+
+19. String.replaceAll(search, replacement)
+Description: Replaces all occurrences of the specified string or regular expression with a new string.
+	Example:
+	let str = "Hello, world! Hello!";
+	console.log(str.replaceAll("Hello", "Hi"));  // Output: "Hi, world! Hi!"
+	
+
+20. String.split(separator)
+Description: Splits a string into an array of substrings based on the separator provided.
+	Example:
+	let str = "Hello, world!";
+	console.log(str.split(", "));  // Output: ["Hello", "world!"]

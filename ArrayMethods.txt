@@ -1,0 +1,192 @@
+
+------------------------------------JAVASCRIPT ARRAY METHODS ---------------------------------
+1. Array.push()
+Description: Adds one or more elements to the end of an array and returns the new length of the array.
+    Example:
+    let arr = [1, 2, 3];
+    arr.push(4);
+    console.log(arr);  // Output: [1, 2, 3, 4]
+
+
+2. Array.pop()
+Description: Removes the last element from an array and returns that element.
+    Example:
+    let arr = [1, 2, 3];
+    let last = arr.pop();
+    console.log(last);  // Output: 3
+    console.log(arr);   // Output: [1, 2]  
+
+3. Array.shift()
+Description: Removes the first element from an array and returns that element.
+    Example:
+    let arr = [1, 2, 3];
+    let first = arr.shift();
+    console.log(first);  // Output: 1
+    console.log(arr);    // Output: [2, 3]
+
+
+4. Array.unshift()
+Description: Adds one or more elements to the beginning of an array and returns the new length of the array.
+    Example:
+    let arr = [1, 2, 3];
+    arr.unshift(0);
+    console.log(arr);  // Output: [0, 1, 2, 3]
+
+
+5. Array.concat()
+Description: Merges two or more arrays or values into one new array.
+    Example:
+    let arr1 = [1, 2];
+    let arr2 = [3, 4];
+    let result = arr1.concat(arr2);
+    console.log(result);  // Output: [1, 2, 3, 4]
+
+6. Array.slice()
+Description: Returns a shallow  of a portion of an array into a new array without modifying the original array.
+    Example:
+    let arr = [1, 2, 3, 4, 5];
+    let sliced = arr.slice(1, 3);
+    console.log(sliced);  // Output: [2, 3]
+
+
+7. Array.splice()
+Description: Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+    
+    syntax :- array.splice(start, deleteCount, item1, item2, ...);
+
+    * start: The index at which to start modifying the array.
+
+    * deleteCount (optional): The number of elements to remove from the array, starting at start. If deleteCount is 
+    not provided, all elements from start to the end of the array will be removed.
+
+    * item1, item2, ... (optional): The elements to add to the array at the start index. If not provided, no elements 
+    will be added.
+    
+    Key Points:
+    It modifies the original array.
+    It returns an array of the removed elements (if any).
+
+    Example:
+    let arr = [1, 2, 3, 4, 5];
+    arr.splice(2, 1, 'a', 'b');
+    console.log(arr);  // Output: [1, 2, "a", "b", 4, 5]
+
+
+8. Array.forEach()
+Description: Executes a provided function once for each array element.
+    Example:
+    let arr = [1, 2, 3];
+    arr.forEach(function(element) {
+    console.log(element);  // Output: 1 2 3
+    });
+
+
+9. Array.map()
+Description: Creates a new array populated with the results of calling a provided function on every element in the array.
+    Example:
+    let arr = [1, 2, 3];
+    let doubled = arr.map(x => x * 2);
+    console.log(doubled);  // Output: [2, 4, 6]
+
+
+10. Array.filter()
+Description: Creates a new array with all elements that pass the test implemented by the provided function.
+    Example:
+    let arr = [1, 2, 3, 4, 5];
+    let even = arr.filter(x => x % 2 === 0);
+    console.log(even);  // Output: [2, 4]
+
+
+11. Array.reduce()
+Description: Applies a function to an accumulator and each element in the array (from left to right) to reduce it to a single value.
+    Example:
+    let arr = [1, 2, 3, 4];
+    let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log(sum);  // Output: 10
+
+
+12. Array.reduceRight()
+Description: Same as reduce(), but it processes the array elements from right to left.
+    Example:
+    let arr = [1, 2, 3, 4];
+    let sum = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log(sum);  // Output: 10
+
+
+13. Array.find()
+Description: Returns the first element in the array that satisfies the provided testing function.
+    Example:
+    let arr = [5, 12, 8, 130, 44];
+    let found = arr.find(element => element > 10);
+    console.log(found);  // Output: 12
+
+
+14. Array.findIndex()
+Description: Returns the index of the first element in the array that satisfies the provided testing function.
+    Example:
+    let arr = [5, 12, 8, 130, 44];
+    let index = arr.findIndex(element => element > 10);
+    console.log(index);  // Output: 1
+
+
+15. Array.includes()
+Description: Determines whether an array contains a certain element.
+    Example:
+    let arr = [1, 2, 3];
+    console.log(arr.includes(2));  // Output: true
+    console.log(arr.includes(4));  // Output: false
+
+
+16. Array.indexOf()
+Description: Returns the first index at which a given element can be found in the array, or -1 if it is not found.
+    Example:
+    let arr = [1, 2, 3, 4];
+    console.log(arr.indexOf(3));  // Output: 2
+    console.log(arr.indexOf(5));  // Output: -1
+
+
+17. Array.sort()
+Description: Sorts the elements of an array in place and returns the sorted array.
+    Example:
+    let arr = [5, 2, 8, 1];
+    arr.sort((a, b) => a - b);
+    console.log(arr);  // Output: [1, 2, 5, 8]
+
+
+18. Array.reverse()
+Description: Reverses the elements of an array in place.
+    Example:
+    let arr = [1, 2, 3];
+    arr.reverse();
+    console.log(arr);  // Output: [3, 2, 1]
+
+
+19. Array.join()
+Description: Joins all the elements of an array into a string, separated by the specified delimiter.
+    Example:
+    let arr = ['apple', 'banana', 'cherry'];
+    console.log(arr.join(', '));  // Output: "apple, banana, cherry"
+
+
+20. Array.every()
+Description: Tests whether all elements in the array pass the test implemented by the provided function.
+    Example:
+    let arr = [1, 2, 3, 4];
+    let allPositive = arr.every(x => x > 0);
+    console.log(allPositive);  // Output: true
+
+
+21. Array.some()
+Description: Tests whether at least one element in the array passes the test implemented by the provided function.
+    Example:
+    let arr = [1, 2, 3, 4];
+    let hasNegative = arr.some(x => x < 0);
+    console.log(hasNegative);  // Output: false
+
+
+22. Array.from()
+Description: Creates a new array instance from an array-like or iterable object.
+    Example:
+    let str = 'hello';
+    let arr = Array.from(str);
+    console.log(arr);  // Output: ['h', 'e', 'l', 'l', 'o']

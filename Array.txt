@@ -1,0 +1,82 @@
+Array Methods
+
+1) length - It returns the length of an array
+    syntax - arrName.length;
+    Example: console.log(arr.length);
+
+2) toString() - It converts array into string 
+    syntax - arrName.toString();
+    Example: console.log(arr.toString());
+
+3) at() - It returns the element on the specified index
+    syntax - arrName.at(Idx);
+    Example: console.log(arr.at(3));
+
+4) arr_name[] - same as at()
+    syntax - arrName[Idx];
+    Example: console.log(arr[4]);
+
+5) join() - It joins all array elements into a string, but we can also specify the separator
+    syntax - arrName.join("separator");
+    Example: console.log(arr.join("/"));
+
+6) push() - adds elements to the end of an array
+    syntax - arrName.push(elem);
+    Example: arr.push(10);
+            console.log(arr);
+
+7) pop() - removes element from the end of an array
+    syntax - arrName.pop();
+    Example: arr.pop();
+            console.log(arr); 
+
+8) shift() - removes element from the start of an array 
+    syntax - arrName.shift();
+    Example: arr.shift();
+            console.log(arr);
+
+9) unshift() - adds element to the start of an array
+    syntax - arrName.unshift(elem);
+    Example: arr.unshift(2);
+            console.log(arr);
+
+10) update array
+	arr[0]= "Anuja" - updates the existing array
+
+11) arr[arr.length] = "Anuja" - updates the existing array
+
+12) delete arr_name[idx] - deletes the array element 
+
+13) concat()- Merge two or more array and returns a new array
+	syntax - arrName.concat(arrName2, arrName3);
+    Example: arr = arr1.concat(arr2, arr3);
+            console.log(arr);
+
+14) slice() - It returns a portion of array and it does not modify the existing array 
+	syntax - arrName.slice(firstIdx, lastIdx); - firstIdx is inclusive and lastIdx is non-inclusive
+    Example: let slicedArr = arr.slice(2,5);
+            console.log(slicedArr);
+            console.log(arr);
+
+15) splice() - It changes the contents of an array by removing or replacing the elements in an existing array.
+    syntax - arrName.splice(startIdx, deleteCount, item1, item2,...);
+    Example: arr.splice(1,2,"A","B")
+            console.log(arr);
+
+16) includes() - It checks if the array contains the specified element. If it include the specified it will return true or else false 
+    syntax - arrName.includes(6);
+    Example: arr.includes(7);
+
+17) indexOf() - It returns the first index at which the specified element is found or -1 if not found.
+    syntax - arrName.indexOf(3);
+    Example: arr.indexOf(5);
+
+18) reverse() - It Reverses the elements of an array.
+    syntax - arrName.reverse();
+    Example: arr.reverse();
+        console.log(arr);
+
+
+19) Array.from() - It creates an instance/copy of an Array.
+    syntax - Array.from(arrName);
+    Example: let arr = Array.from(arr);
