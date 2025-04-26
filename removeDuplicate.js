@@ -1,4 +1,4 @@
-// remove the duplicate elements 
+// // remove the duplicate elements 
 
 let arr = [1,3,2,4,5,6,2,1,3,4];
 // console.log(arr);
@@ -12,3 +12,19 @@ for (let i of arr) {
     }
 }
 console.log(arr2);
+
+
+// lexical Environment
+
+// function outer() {
+//     let a = 10;
+
+//     function inner() {
+//         let b = 20;
+//         console.log(a + b);
+//     }
+
+//     inner();
+// }
+
+// outer();
