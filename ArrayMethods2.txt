@@ -1,0 +1,169 @@
+/*
+1. forEach()
+Purpose: The forEach() method executes a provided function once for each element in the array.
+
+Return Value: undefined. It does not return anything. It simply performs the operation for each element in the array.
+
+Usage: Primarily used for side-effects like logging, updating variables, or performing actions on each element,
+but it does not create or return a new array.
+
+It cannot be chained (since it doesn't return anything).
+
+syntax:
+array.forEach((element, index, array) => {
+    // Do something with element
+});
+
+*/
+
+let arr = [10, 20, 30];
+arr.forEach((element, index) => {
+    console.log(`Index: ${index}, Element: ${element}`);
+});
+// Output: 
+// Index: 0, Element: 10
+// Index: 1, Element: 20
+// Index: 2, Element: 30
+
+
+/*
+2. map()
+Purpose: The map() method creates a new array populated with the results of calling a provided function on every 
+element in the array.
+
+Return Value: A new array where each element is the result of the function applied to the corresponding element in 
+the original array.
+
+Usage: Used when you want to transform elements of an array and get a new array as the result.
+
+It can be chained because it returns a new array.
+
+Syntax:
+const newArray = array.map((element, index, array) => {
+    // Return the transformed element
+});
+
+*/
+
+let arr2 = [1, 2, 3];
+let doubled = arr.map(x => x * 2);
+console.log(doubled);  // Output: [2, 4, 6]
+console.log(arr2);      // Output: [1, 2, 3]  (Original array is unchanged)
+
+// let arr = [10, 20, 30];
+// let modified = arr.map((element, index) => {
+//     return `Element: ${element}, Index: ${index}`;
+// });
+// console.log(modified);
+// Output: ["Element: 10, Index: 0", "Element: 20, Index: 1", "Element: 30, Index: 2"]
+
+
+
+
+/*
+3. filter() :-
+
+1. Purpose:
+The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+2.Return Value:
+A new array containing all elements that pass the test. If no elements pass the test, an empty array is returned.
+The original array is not modified.
+
+3. Usage:
+Primarily used to filter out elements based on a specific condition or criteria.
+The new array contains only the elements that return true from the callback function's test.
+
+4. Can be Chained?:
+Yes, since it returns a new array, filter() can be chained with other array methods like map(), reduce(), etc.=
+
+Syntax:
+const newArray = array.filter(function(element, index, array) {
+    // Return true to keep the element, false to remove it
+});
+
+*/
+
+let numbers = [1, 2, 3, 4, 5];
+
+// Filter out even numbers
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+
+console.log(evenNumbers);  // Output: [2, 4]
+
+
+/*
+Diffrence between foreach and filter()
+
+1. Purpose :-
+
+forEach():
+Used for executing a function on each element in the array.
+Primarily for side effects like logging, updating external variables, or performing actions on each element, but it does not return a new array.
+
+filter():
+Used for filtering elements in an array based on a condition.
+It returns a new array containing only the elements that pass a test specified in the callback function.
+
+
+2. Return Value :-
+
+forEach():
+Returns undefined.
+It does not return anything, just performs the given action on each element.
+
+filter():
+Returns a new array.
+The new array contains the elements that passed the condition specified in the callback function.
+
+3. Modification of Original Array :-
+
+forEach():
+Does not modify the original array, unless you explicitly modify it within the function.
+It's typically used for side effects rather than transformation.
+
+filter():
+Does not modify the original array.
+Returns a new array that contains only the elements that meet the specified condition.
+
+4. Chaining :-
+
+forEach():Cannot be chained because it returns undefined.
+
+filter(): Can be chained with other array methods like map(), reduce(), etc., since it returns a new array.
+
+*/
+
+
+
+
+
+
+/*
+Syntax of reduce()
+array.reduce((accumulator, currentValue, index, array) => {
+    // Your operation logic
+}, initialValue);
+
+Parameters:- 
+
+1. callback function: This function is executed for each element in the array.
+2. accumulator: The accumulated value that gets updated on each iteration. Initially, it starts with the initialValue 
+provided (or the first element of the array if no initial value is given).
+3. currentValue: The current element being processed in the array.
+4. index (optional): The index of the current element being processed.
+5. array (optional): The array reduce() was called on.
+6. initialValue (optional): The initial value of the accumulator. If not provided, reduce() uses the first element
+of the array as the initial accumulator value.
+
+*/
+let arr3 = [1, 2, 3, 4];
+
+// Sum of all elements with iteration logging
+let sum = arr3.reduce((accumulator, currentValue, index) => {
+    console.log(`Iteration ${index + 1}:`);
+    console.log(`Accumulator: ${accumulator}, Current Value: ${currentValue}`);
+    return accumulator + currentValue;  // Add the current value to the accumulator
+}, 0);  // Initial accumulator value is 0
+
+console.log('Final Sum:', sum);  // Output: Final Sum: 10
