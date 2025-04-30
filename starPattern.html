@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hollow Square Pattern</title>
+</head>
+<body>
+
+<pre id="pattern"></pre>
+
+<script>
+//   let size = 5;
+  let pattern = "";
+
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      // Print stars on first row, last row, first column, last column
+      if (i === 0 || i === 8 - 1 || j === 0 || j === 8 - 1) {
+        pattern += "* ";
+      } else {
+        pattern += "  "; // spaces inside
+      }
+    }
+    pattern += "\n";
+  }
+
+  document.getElementById("pattern").textContent = pattern;
+</script>
+
+</body>
+</html>
