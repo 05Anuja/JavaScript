@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide-In Sign In Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <button id="signInBtn" onclick="signInFunc()">LOG IN</button>
+  </nav>
+
+  <div class="overlay" id="overlay">
+    <div class="signin-form" id="signinForm">
+      <button class="close-btn" id="closeBtn" onclick="closeBtnFunc()">&times;</button>
+      <h2>LOG IN</h2>
+      <label for="username">USERNAME</label>
+      <input type="text" id="username" placeholder="Username">
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit" class="submit">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
