@@ -13,3 +13,6 @@ for (num of arr) {
 
 console.log(secondHighest);
 
+// let numbers = [10,20,30];
+// numbers.sort((a,b) => b - a);
+// console.log(`Second Highest Number is ${numbers[1]}`);
