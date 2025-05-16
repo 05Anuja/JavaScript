@@ -48,12 +48,14 @@ In Heap Memory, changes are applied to the original values
 
 // Example for stack 
 
-console.log(`Stack Memory Allocation`)
-let name1 = "anuja";
-let name2 = name1;
-name2 = "Aryan";
-console.log(`Name1 : ${name1}`);
-console.log(`Name2 : ${name2}`);
+// console.log(`Stack Memory Allocation`)
+// let name1 = "anuja";
+// let name2 = name1;
+// console.log(`Name1 : ${name1}`);
+// console.log(`Name2 : ${name2}`);
+// name2 = "Aryan";
+// console.log(`Name2 : ${name2}`);
+// console.log(`Name1 : ${name1}`);
 
 // Example for Heap 
 
