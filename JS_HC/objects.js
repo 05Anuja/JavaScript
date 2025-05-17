@@ -28,7 +28,7 @@ let user1 = {
 syntax: objName[key] = "newValue";
 */
 
-// user1["full name"] = "Anuja Bhimraj Pawar";
+user1["full name"] = "Anuja Bhimraj Pawar";
 // console.log(user1["full name"]);
 
 
@@ -62,7 +62,7 @@ let person = new Object({
     age: 21,
 });
 
-// console.log(person);
+// console.log(person); // {name: 'Anuja', age: 21}
 // console.log(user1.lastLoginDays);
 
 
@@ -80,8 +80,8 @@ let regularUser = {
 
 // Ways to access object > object > object
 
-// console.log(regularUser["fullname"].userFullname["firstName"]);
-// console.log(regularUser.fullname.userFullname.lastName);
+// console.log(regularUser["fullname"].userFullname["firstName"]); //Anuja
+// console.log(regularUser.fullname.userFullname.lastName); //Pawar
 
 
 // How to merge two objects
@@ -95,7 +95,7 @@ let obj2 = {
     4: "D",
 }
 
-// let obj3 = {obj1, obj2};
+let obj3 = {obj1, obj2};
 // console.log(obj3);
 // output - { obj1: { '1': 'A', '2': 'B' }, obj2: { '3': 'C', '4': 'D' } }
 
@@ -103,9 +103,9 @@ let obj2 = {
 let obj4 = Object.assign({}, obj1, obj2);
 // console.log(obj1); //{ '1': 'A', '2': 'B' }
 // console.log(obj4); //{ '1': 'A', '2': 'B', '3': 'C', '4': 'D' }
-let obj3 = Object.assign(obj1, obj2);
+let obj6 = Object.assign(obj1, obj2);
 // console.log(obj1); //{ '1': 'A', '2': 'B', '3': 'C', '4': 'D' }
-// console.log(obj3); //{ '1': 'A', '2': 'B', '3': 'C', '4': 'D' }
+// console.log(obj6); //{ '1': 'A', '2': 'B', '3': 'C', '4': 'D' }
 
 let obj5 = {...obj1, ...obj2};
 // console.log(obj5);
@@ -134,11 +134,11 @@ let personObj = {
     age: 21,
 }
 
-console.log(Object.keys(personObj)); // this will return an array of keys in object
+// console.log(Object.keys(personObj)); // this will return an array of keys in object
 
-console.log(Object.values(personObj)); // this will return an array of values in object
+// console.log(Object.values(personObj)); // this will return an array of values in object
 
-console.log(Object.entries(personObj));
+// console.log(Object.entries(personObj));
 //Output- [ [ 'id', 1 ], [ 'name', 'Anuja' ], [ 'age', 21 ] ]
 
-console.log(personObj.hasOwnProperty('password')); // returns true/false
+// console.log(personObj.hasOwnProperty('password')); // returns true/false

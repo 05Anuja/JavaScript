@@ -12,11 +12,11 @@ let date = new Date();
 // console.log(date.toJSON());
 // console.log(date.toLocaleString());
 
-// let myCreatedDate = new Date(2004, 11, 13);
+let myCreatedDate = new Date(2004, 11, 13);
 // console.log(myCreatedDate.toDateString());
 
-// let myCreatedDate = new Date(2004, 11, 13,14,30);
-// console.log(myCreatedDate.toLocaleString());
+let myCreatedDate2 = new Date(2004, 11, 13,14,30);
+// console.log(myCreatedDate2.toLocaleString());
 
 // MM/DD/YY
 let dmy = new Date("12-13-2004");
