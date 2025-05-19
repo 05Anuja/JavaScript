@@ -25,16 +25,17 @@ function sayName1 () {
 
 
 // This is IIFE
-// (function sayName() {
-//     let name = "Aryan";
-//     (function sayMyName() {
-//         let name1 = "Vinish";
-//         console.log(`${name1}`)
-//         // console.log(${name}); // name is not useable cuz we are using IIFE
-//     })();
-//     console.log(`${name}`)
-// })();
-// OUTPUT - Aryan
+(function sayHello() {
+    let name = "Aryan";
+    (function sayMyName() {
+        let name1 = "Vinish";
+        console.log(`${name1}`)
+        // console.log(${name}); // name is not useable cuz we are using IIFE. This is what avoiding global pollution means
+    })();
+    console.log(`Hello ${name}`)
+})();
+// OUTPUT - Vinish
+// Hello Aryan
 
 /*
 NOTE: 
@@ -60,11 +61,11 @@ console.log(
 // Named IIFE and Normal IIFE
 
 // Named IIFE
-(function sayHello() {
-    console.log("Hello");
-})();
+// (function sayHello() {
+//     console.log("Hello");
+// })();
 
 // Normal IIFE
-((name) => {
-    console.log(`${name} hiii!!`);
-})("Anuja");
+// ((name) => {
+//     console.log(`${name} hiii!!`);
+// })("Anuja");
