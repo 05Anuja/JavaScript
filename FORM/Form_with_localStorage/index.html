@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CRUD with Local Storage</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>INFORMATION</legend>
+      <form onsubmit="formSubmit(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" max="100" required />
+
+        <label for="city">City</label>
+        <input type="text" id="city" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <table>
+      <thead>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td><strong>Age</strong></td>
+          <td><strong>City</strong></td>
+          <td><strong>Actions</strong></td>
+        </tr>
+      </thead>
+      <tbody id="table_body"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
