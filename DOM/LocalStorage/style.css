@@ -15,7 +15,7 @@ fieldset {
   margin: 30px auto;
   padding: 30px;
   border-radius: 10px;
-  border: 2px solid #4caf50;
+  border: 2px solid rgb(33, 33, 135);
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -23,14 +23,13 @@ fieldset {
 legend {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4caf50;
+  color: rgb(33, 33, 135);
   padding: 0 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 form label {
@@ -48,7 +47,7 @@ form input {
 }
 
 form input:focus {
-  border-color: #4caf50;
+  border-color: rgb(33, 33, 135);
   outline: none;
 }
 
@@ -56,7 +55,7 @@ button {
   padding: 10px;
   font-size: 1rem;
   color: white;
-  background-color: #4caf50;
+  background-color: rgb(33, 33, 135);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -66,7 +65,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: rgb(56, 56, 110);
 }
 
 table {
@@ -86,7 +85,7 @@ table td {
 }
 
 table thead {
-  background-color: #4caf50;
+  background-color: rgb(33, 33, 135);
   color: white;
 }
 
