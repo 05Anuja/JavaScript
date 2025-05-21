@@ -24,3 +24,5 @@ for (let n = 2; n <= 10; n++) {
   }
   if(isPrime) console.log(n);
 }
+
+// 
