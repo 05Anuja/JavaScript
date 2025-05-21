@@ -7,18 +7,26 @@
 </head>
 <body>
   <nav class="navbar">
-    <button id="signInBtn" onclick="signInFunc()">LOG IN</button>
+    <button id="signInBtn" onclick="signInFunc()">SIGN IN</button>
   </nav>
 
   <div class="overlay" id="overlay">
     <div class="signin-form" id="signinForm">
       <button class="close-btn" id="closeBtn" onclick="closeBtnFunc()">&times;</button>
-      <h2>LOG IN</h2>
-      <label for="username">USERNAME</label>
+      <h2>SIGN IN FORM</h2>
+      <label for="username"> ENTER USERNAME</label>
       <input type="text" id="username" placeholder="Username">
-      <label for="password">PASSWORD</label>
+      <small class="error"></small>
+
+      <label for="password">ENTER PASSWORD</label>
       <input type="password" id="password" placeholder="Password">
-      <button type="submit" class="submit">Submit</button>
+      <small class="error"></small>
+
+      <label for="confirmPassword">CONFIRM PASSWORD</label>
+      <input type="password" id="confirmPassword" placeholder="Password">
+      <small class="error"></small>
+      
+      <button type="submit" class="submit" onclick="formSubmit(event)">Submit</button>
     </div>
   </div>
 
