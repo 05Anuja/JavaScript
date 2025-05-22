@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-    <title>Local Storage</title>
-  </head>
-  <body>
-    <fieldset>
-      <legend>INFORMATION</legend>
-      <form action="">
-        <label for="name">Name</label>
-        <input type="text" id="name" />
-        <br />
-        <br />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>CRUD with Local Storage</title>
+</head>
+<body>
 
-        <label for="age">Age</label>
-        <input type="number" id="age" min="1" max="100"/>
-        <br />
-        <br />
+  <fieldset>
+    <legend>INFORMATION</legend>
+    <form onsubmit="formSubmit(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" required />
 
-        <label for="city">City</label>
-        <input type="text" id="city" />
-        <br />
-        <br />
+      <label for="age">Age</label>
+      <input type="number" id="age" min="1" max="100" required />
 
-        <button type="submit" onclick="formSubmit(event)">Submit</button>
-      </form>
-    </fieldset>
+      <label for="city">City</label>
+      <input type="text" id="city" required />
 
-    <table>
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Age</td>
-                <td>City</td>
-                <td>Action</td>
-            </tr>
-        </thead>
-        <tbody id="table_body"></tbody>
-    </table>
-  </body>
-  <script src="./script.js"></script>
+      <button type="submit">Submit</button>
+    </form>
+  </fieldset>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="table_body"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
 </html>

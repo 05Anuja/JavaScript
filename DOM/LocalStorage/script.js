@@ -1,54 +1,72 @@
 let editIndex = null;
 
+window.onload = function () {
+  displayData(); // Load existing data on page load
+};
+
 function formSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
-    let city = document.getElementById("city").value;
+  const name = document.getElementById("name").value.trim();
+  const age = document.getElementById("age").value.trim();
+  const city = document.getElementById("city").value.trim();
 
-    const formData = {name, age, city};
+  const formData = { name, age, city };
 
-    let students = JSON.parse(localStorage.getItem("formData")) || [];
+  let students = JSON.parse(localStorage.getItem("formData")) || [];
 
-    students.push(formData);
-    localStorage.setItem("formData", JSON.stringify(students));
+  if (editIndex === null) {
+    students.push(formData); // CREATE
+  } else {
+    students[editIndex] = formData; // UPDATE
+    editIndex = null;
+  }
 
-    // console.log(formData);
-    display();
-    
-    document.getElementById("name").value = "";
-    document.getElementById("age").value = "";
-    document.getElementById("city").value = "";
+  localStorage.setItem("formData", JSON.stringify(students));
+  displayData();
+
+  document.getElementById("name").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("city").value = "";
 }
 
-function display() {
-    let students = JSON.parse(localStorage.getItem("formData")) || [];
-    const tableBody = document.getElementById("table_body");
-    tableBody.innerHTML = "";
+function displayData() {
+  const students = JSON.parse(localStorage.getItem("formData")) || [];
+  const tableBody = document.getElementById("table_body");
 
-    students.forEach((student, index) => {
-        const row = document.createElement("tr");
+  tableBody.innerHTML = "";
 
-        row.innerHTML = `
-        <td>${student.name}</td>
-        <td>${student.age}</td>
-        <td>${student.city}</td>
-        <td>
-            <button class = "action-btn edit-btn">EDIT</button>
-            <button class = "action-btn delete-btn" onclick="deleteData(${index})">DELETE</button>
-        </td>
-        `;
+  students.forEach((student, index) => {
+    const row = document.createElement("tr");
 
-        tableBody.appendChild(row);
-    })
+    row.innerHTML = `
+      <td data-label="Name">${student.name}</td>
+      <td data-label="Age">${student.age}</td>
+      <td data-label="City">${student.city}</td>
+      <td data-label="Actions">
+        <button class="action-btn edit-btn" onclick="editData(${index})">Edit</button>
+        <button class="action-btn delete-btn" onclick="deleteData(${index})">Delete</button>
+      </td>
+    `;
+
+    tableBody.appendChild(row);
+  });
+}
+
+function editData(index) {
+  const students = JSON.parse(localStorage.getItem("formData")) || [];
+  const student = students[index];
+
+  document.getElementById("name").value = student.name;
+  document.getElementById("age").value = student.age;
+  document.getElementById("city").value = student.city;
+
+  editIndex = index;
 }
 
 function deleteData(index) {
-    const students = JSON.parse(localStorage.getItem("formData")) || [];
-    students.splice(index, 1);
-
-    localStorage.setItem("formData", JSON.stringify(students));
-    display();
+  let students = JSON.parse(localStorage.getItem("formData")) || [];
+  students.splice(index, 1);
+  localStorage.setItem("formData", JSON.stringify(students));
+  displayData();
 }
-

@@ -11,7 +11,8 @@ body {
 }
 
 fieldset {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   margin: 30px auto;
   padding: 30px;
   border-radius: 10px;
@@ -30,6 +31,7 @@ legend {
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 form label {
@@ -38,11 +40,10 @@ form label {
 }
 
 form input {
-  padding: 8px;
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s;
   width: 100%;
 }
 
@@ -60,7 +61,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 120px;
+  width: 100%;
+  max-width: 120px;
   align-self: center;
 }
 
@@ -70,7 +72,7 @@ button:hover {
 
 table {
   margin: 30px auto;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   background-color: white;
   border-collapse: collapse;
@@ -90,7 +92,7 @@ table thead {
 }
 
 .action-btn {
-  margin: 0 5px;
+  margin: 5px;
   padding: 6px 10px;
   font-size: 0.9rem;
   border: none;
@@ -103,7 +105,67 @@ table thead {
   color: white;
 }
 
+.edit-btn:hover {
+  background-color: blue;
+}
+
 .delete-btn {
-  background-color: #f44336;
+  background-color: #c13e35;
   color: white;
+}
+
+.delete-btn:hover {
+  background-color: red;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  td {
+    position: relative;
+    padding: 12px 15px 12px 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+    min-height: 45px;
+    word-wrap: break-word;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .action-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 100px;
+    font-size: 1rem;
+  }
 }
