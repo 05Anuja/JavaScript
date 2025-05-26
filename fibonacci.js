@@ -18,6 +18,8 @@ num1 = 0 num2 = 0 & num3 = num1 + num2 = 0 + 1 = 1;
 num1 = 1 num2 = 1 & num3 = num1 + num2 = 1 + 1 = 2;
 3rd iteration-
 num1 = 1 num2 = 2 & num3 = num1 + num2 = 1 + 2 = 3;
-th iteration-
+4th iteration-
 num1 = 2 num2 = 3 & num3 = num1 + num2 = 2 + 3 = 5;
+5th iteration- 
+num1 = 3 num2 = 5 & num3 = num1 + num2 = 3 + 5 = 8; 
 */
