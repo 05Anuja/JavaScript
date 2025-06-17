@@ -1,0 +1,23 @@
+1) For Username: 
+usernameRegex: /^[a-zA-Z0-9_]{3,15}$/
+example: john_doe, user123, AnujaP
+Error Message: "Username must be 3–15 characters and can only contain letters, numbers, or underscores."
+
+2) For Email: 
+emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+Error Message: "Please enter a valid email address (e.g., user@example.com)."
+
+3) For Password: 
+passwordRegex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/
+example: Password@123, Abcdef1!
+Error Message: "Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
+
+4) For City/State/Country
+regex: /^[a-zA-Z\s]{2,50}$/
+example: Pune, Maharashtra
+Error Message: "Please enter a valid name using only letters."
+
+5) For pincode
+regex: /^\d{6}$/
+example: 560034
+Error Message: "Please enter a valid 6-digit PIN code."
