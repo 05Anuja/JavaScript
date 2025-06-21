@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <h1 id="title" class="heading">DOM Manipulation <span style="display: none;">Lorem ipsum dolor sit amet.</span></h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, id!</p>
+    </div> -->
+
+    <div class="parent">
+        <!-- comment -->
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[2]);
+    // parent.children[2].innerText = "Hello"
+    // console.log(parent.children[2]);
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const child = document.querySelector(".days");
+    // console.log(child);
+    // console.log(child.parentElement);
+    // console.log(child.nextElementSibling);
+
+    console.log("Nodes: ", parent.childNodes);
+</script>
+</html>
