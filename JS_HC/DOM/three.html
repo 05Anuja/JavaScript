@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul id="uli">
+        <li>JavaScrpit</li>
+    </ul>
+</body>
+<script>
+    function createListItems(langName) {
+        // console.log(uli)
+        const li = document.createElement("li");
+        li.innerHTML = langName;
+        document.querySelector("#uli").appendChild(li)
+    }
+
+    createListItems("Python");
+    createListItems("CSS");
+    createListItems("Java");
+
+
+    // This is more optimized Code
+    function addLang (langName) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector("#uli").appendChild(li)
+    }
+
+    addLang("Python");
+
+    // Editing Values
+    const editLang = document.querySelector("li:nth-child(3)");
+    // editLang.innerHTML = "Express"
+    console.log(editLang)
+    const newLi = document.createElement("li");
+    newLi.textContent = "Express";
+    editLang.replaceWith(newLi)
+    console.log(editLang)
+
+
+    // Another way to edit values
+    const firstLang = document.querySelector("li:first-child");
+    console.log(firstLang)
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    // Remove element using DOM
+    const removeLang = document.querySelector("li:last-child");
+    console.log(removeLang)
+    removeLang.remove();
+</script>
+</html>
