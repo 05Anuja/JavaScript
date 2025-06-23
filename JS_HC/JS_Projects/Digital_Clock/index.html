@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #fff;
+        background-color: grey;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .clock-container {
+        text-align: center;
+        padding: 40px;
+        border: 3px solid #fff;
+        border-radius: 20px;
+        background-color: #111;
+      }
+
+      #banner span {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      #clock {
+        font-size: 4rem;
+        letter-spacing: 5px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock-container">
+      <div id="banner"><span>Digital Clock</span></div>
+      <div id="clock"></div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
