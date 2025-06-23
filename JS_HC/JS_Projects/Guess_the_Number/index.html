@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Numbers</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #fff;
+        color: black;
+        padding: 30px 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 90%;
+        max-width: 500px;
+      }
+
+      #heading {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .container p {
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3367d6;
+      }
+
+      #prevGuess,
+      #remainingGuess {
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heading">Guessing Game</div>
+    <div class="container">
+      <p>Try and guess the numbers between 1 and 100</p>
+      <p>You have 10 attempts to guess the correct numbers</p>
+      <form action="">
+        <label for="guess">Guess a Number</label>
+        <br />
+        <input type="number" name="guess" id="guess" />
+        <br />
+        <button type="submit" id="submitBtn">Submit Guess</button>
+      </form>
+
+      <p id="prevGuess">Previous Guesses:</p>
+      <p id="remainingGuess">Guesses Remainging:</p>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
