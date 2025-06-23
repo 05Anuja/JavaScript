@@ -1,3 +1,4 @@
+// Digital Clock
 const clock = document.querySelector("#clock");
 
 setInterval (() => {
